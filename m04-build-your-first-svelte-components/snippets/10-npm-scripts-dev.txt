@@ -1,0 +1,3 @@
+    "dev": "run-p dev:server dev:client",
+    "dev:client": "rollup -c -w",
+    "dev:server": "json-server --watch db.json",

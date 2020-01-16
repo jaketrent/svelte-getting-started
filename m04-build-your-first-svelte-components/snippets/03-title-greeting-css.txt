@@ -1,0 +1,16 @@
+  header {
+    margin: var(--spacingMedium) 0 var(--spacingLarge) 0;
+    text-transform: uppercase;
+  }
+  .preamble {
+    display: block;
+  }
+  h1 {
+    font-size: var(--typeSizeXXLarge);
+    font-weight: var(--typeWeightBold);
+    line-height: var(--typeLineHeightTight);
+  }
+
+  .greeting {
+    font-size: var(--typeSizeSmall);
+  }

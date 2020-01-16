@@ -1,0 +1,3 @@
+  function isValidUrl(url) {
+    return url && /http.+\.(jpg|png|gif)$/.test(url);
+  }

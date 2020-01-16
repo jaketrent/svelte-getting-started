@@ -1,0 +1,54 @@
+:root {
+  --colorFg: #533721;
+  --colorFgInverse: #fff;
+  --colorBg: #eedec9;
+  --colorCta: #e64224;
+
+  --spacingXSmall: 0.25rem;
+  --spacingSmall: 0.5rem;
+  --spacingMedium: 1rem;
+  --spacingLarge: 1.5rem;
+  --spacingXLarge: 2rem;
+
+  --typeFaceDefault: 'Open Sans', sans-serif;
+  --typeLineHeightTight: 1em;
+  --typeSizeSmall: 0.75rem;
+  --typeSizeDefault: 16px;
+  --typeSizeMedium: 1rem;
+  --typeSizeLarge: 1.5rem;
+  --typeSizeXLarge: 3rem;
+  --typeSizeXXLarge: 4rem;
+  --typeWeightDefault: 400;
+  --typeWeightBold: 800;
+}
+
+html,
+body {
+  background: var(--colorBg);
+  color: var(--colorFg);
+  font-family: var(--typeFaceDefault);
+  font-size: var(--typeSizeDefault);
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+input,
+button,
+textarea {
+  margin-bottom: 0;
+}
+
+@media (min-width: 70rem) {
+  :root {
+    --typeSizeDefault: 24px;
+  }
+}

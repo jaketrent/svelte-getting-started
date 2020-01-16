@@ -1,0 +1,25 @@
+  .button {
+    background: var(--colorCta);
+    border: none;
+    border-radius: calc(
+      (2 * (var(--spacingSmall) * 1.5) + var(--typeLineHeightTight)) / 2
+    );
+    color: var(--colorFgInverse);
+    cursor: pointer;
+    display: inline-block;
+    font-size: var(--typeSizeSmall);
+    font-weight: var(--typeWeightBold);
+    line-height: var(--typeLineHeightTight);
+    margin: 0;
+    padding: calc(var(--spacingSmall) * 1.5) var(--spacingLarge);
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    transition: filter 150ms;
+    white-space: nowrap;
+  }
+  .button:hover,
+  .button:focus {
+    filter: brightness(115%);
+    outline: none;
+    text-decoration: none;
+  }
