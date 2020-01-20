@@ -1,4 +1,4 @@
-  const books =
+  const books = [
     {
       "id": 1,
       "title": "Little Women",
