@@ -1,8 +1,8 @@
 <script>
   import Library from "./library/Library.svelte";
 
-  function handleBookSelect(id) {
-    console.log("app handle", id);
+  function handleBookSelect(event) {
+    console.log("app handle", event.detail.id);
   }
 </script>
 
@@ -13,5 +13,5 @@
 </style>
 
 <main>
-  <Library onBookSelect={handleBookSelect} />
+  <Library on:book-select={handleBookSelect} />
 </main>
