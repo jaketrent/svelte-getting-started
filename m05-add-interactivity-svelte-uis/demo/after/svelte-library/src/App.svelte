@@ -1,5 +1,9 @@
 <script>
   import Library from "./library/Library.svelte";
+
+  function handleClick(id) {
+    console.log("app handle", id);
+  }
 </script>
 
 <style>
@@ -9,6 +13,5 @@
 </style>
 
 <main>
-  <Library />
+  <Library onClick={handleClick} />
 </main>
-
