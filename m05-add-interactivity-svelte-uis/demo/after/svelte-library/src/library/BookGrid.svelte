@@ -3,7 +3,7 @@
   import Heart from "./Heart.svelte";
 
   export let books = [];
-  export let onClick;
+  export let onBookSelect;
 </script>
 
 <style>
@@ -31,7 +31,7 @@
 <ul>
   {#each books as book}
     <li>
-      <BookCover {book} {onClick} />
+      <BookCover {book} onClick={onBookSelect} />
       {#if book.favorite}
         <div class="heart">
           <Heart />
