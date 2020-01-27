@@ -2,8 +2,8 @@
   import Detail from "./detail/Detail.svelte";
   import Library from "./library/Library.svelte";
 
-  let page = "library";
-  let pageArgs = {};
+  let page = "detail";
+  let pageArgs = { id: 3 };
 
   function handleBookSelect(event) {
     console.log("app handle", event.detail.id);
