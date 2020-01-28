@@ -1,0 +1,12 @@
+  <div
+    class="book book--variation-{book.variation}
+    {isValidUrl(book.cover) ? 'book--cover' : 'book--no-cover'}">
+    <div
+      class="cover"
+      style={isValidUrl(book.cover) ? 'background-image: url(' + book.cover + ')' : ''}>
+      <header>
+        <h2 class="title">{book.title || ''}</h2>
+      </header>
+      <div class="author">{book.author || ''}</div>
+    </div>
+  </div>
