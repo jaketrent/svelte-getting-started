@@ -1,16 +1,10 @@
 <script>
+  import { Route, Router } from "svelte-routing";
+
   import Detail from "./detail/Detail.svelte";
   import Library from "./library/Library.svelte";
 
-  let page = "detail";
-  let pageArgs = { id: 3 };
-
-  function handleBookSelect(event) {
-    console.log("app handle", event.detail.id);
-
-    page = "detail";
-    pageArgs = event.detail;
-  }
+  export let url = "";
 </script>
 
 <style>
@@ -19,10 +13,13 @@
   }
 </style>
 
-<main>
-  {#if page === 'library'}
-    <Library on:book-select={handleBookSelect} />
-  {:else if page === 'detail'}
-    <Detail {...pageArgs} />
-  {/if}
-</main>
+<Router {url}>
+  <main>
+    <Route path="/">
+      <Library />
+    </Route>
+    <Route path="/books/:id" let:params>
+      <Detail id={params.id} />
+    </Route>
+  </main>
+</Router>
