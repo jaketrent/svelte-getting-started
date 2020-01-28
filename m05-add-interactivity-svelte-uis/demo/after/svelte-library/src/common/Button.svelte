@@ -26,6 +26,6 @@
   }
 </style>
 
-<button class="button">
+<button on:click class="button">
   <slot />
 </button>
