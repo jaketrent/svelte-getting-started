@@ -100,9 +100,9 @@
 {#if interactive}
   <a
     href={'/books/' + book.id}
+    use:links
     class="book book--interactive book--variation-{book.variation}
-    {isValidUrl(book.cover) ? 'book--cover' : 'book--no-cover'}"
-    use:links>
+    {isValidUrl(book.cover) ? 'book--cover' : 'book--no-cover'}">
     <span
       class="cover"
       style={isValidUrl(book.cover) ? 'background-image: url(' + book.cover + ')' : ''}>

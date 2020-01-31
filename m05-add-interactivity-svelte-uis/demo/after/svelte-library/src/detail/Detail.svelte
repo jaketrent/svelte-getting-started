@@ -21,7 +21,6 @@
       ...book,
       favorite: !book.favorite
     };
-
     const { ok } = await httpPut("/" + book.id, toggledBook);
     if (ok) {
       book = toggledBook;

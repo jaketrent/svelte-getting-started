@@ -1,3 +1,9 @@
+<script>
+  import { links } from "svelte-routing";
+
+  export let to;
+</script>
+
 <style>
   .button {
     background: var(--colorCta);
@@ -26,6 +32,12 @@
   }
 </style>
 
-<button on:click class="button">
-  <slot />
-</button>
+{#if to}
+  <a href={to} on:click use:links class="button">
+    <slot />
+  </a>
+{:else}
+  <button on:click class="button">
+    <slot />
+  </button>
+{/if}

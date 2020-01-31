@@ -30,7 +30,7 @@
 <ul>
   {#each books as book}
     <li>
-      <BookCover {book} interactive />
+      <BookCover interactive {book} />
       {#if book.favorite}
         <div class="heart">
           <Heart />
