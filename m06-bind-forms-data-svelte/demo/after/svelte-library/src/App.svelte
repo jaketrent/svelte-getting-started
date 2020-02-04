@@ -16,11 +16,11 @@
 
 <Router {url}>
   <main>
-    <Route path="/books/:id" let:params>
-      <Detail id={params.id} />
-    </Route>
     <Route path="/create">
       <Create />
+    </Route>
+    <Route path="/books/:id" let:params>
+      <Detail id={params.id} />
     </Route>
     <Route path="/">
       <Library />

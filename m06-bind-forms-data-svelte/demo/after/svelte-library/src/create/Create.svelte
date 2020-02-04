@@ -8,14 +8,14 @@
   import { httpPost } from "../common/api.js";
   import TextInput from "./TextInput.svelte";
 
-  let title;
-  let author;
-  let cover;
-  let about;
+  let title = "";
+  let author = "";
+  let cover = "";
+  let about = "";
 
   $: book = { title, author, cover, about };
 
-  async function handleSubmit(evt) {
+  async function handleSubmit(event) {
     function getRandomInt(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
@@ -26,6 +26,7 @@
       variation: getRandomInt(0, 2),
       favorite: false
     };
+
     const { ok } = await httpPost("/", newBook);
     if (ok) {
       navigate("/");
@@ -65,7 +66,7 @@
   <div class="fields">
     <TextInput label="Title" bind:value={title} />
     <TextInput label="Author" bind:value={author} />
-    <TextInput label="Cover" bind:value={cover} />
+    <TextInput label="Cover URL" bind:value={cover} />
     <TextInput label="About" bind:value={about} multiline />
     <div>
       <Button>Save</Button>
